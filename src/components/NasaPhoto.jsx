@@ -81,6 +81,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    justify-content: center;
+}
 
     img{
       width: 80%;
@@ -89,6 +92,15 @@ const Container = styled.div`
     }
 
     .voltar{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+
+      .active{
+        margin: 0;
+        padding 0;
+      }
       img{
         height: 10rem;
       }

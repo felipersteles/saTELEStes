@@ -80,6 +80,7 @@ const Container = styled.div`
     img {
       position: relative;
       height: 6rem;
+      width: 6rem;
     }
 
     background: linear-gradient(223deg, #5b26ff, #000000, #8d00ff);
