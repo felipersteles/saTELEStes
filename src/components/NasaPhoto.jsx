@@ -32,7 +32,7 @@ function NasaPhoto() {
         </h3>
       </div>
       <div className="satelite">
-        <img src={photoData.url} alt={photoData.title} />
+        <img src={photoData.url} alt={photoData.title} className="imagem" />
 
         <div className="desc">
           <div className="conteudo">
@@ -45,11 +45,10 @@ function NasaPhoto() {
             </p>
           </div>
         </div>
-
-        <NavLink to="/" className="voltar">
-          <img src={voltar} alt="" className="btn" />
-        </NavLink>
       </div>
+      <NavLink to="/" className="voltar">
+        <img src={voltar} alt="" className="btn" />
+      </NavLink>
     </Container>
   );
 }
@@ -63,119 +62,44 @@ const Container = styled.div`
   background-attachment: fixed;
   background-position: center;
 
-  .intro{
+  .intro {
     padding: 4rem 3rem 0;
     text-align: center;
-    font-size: 2.7rem;
+    font-size: 3.5vh;
     color: white;
     margin-bottom: 3rem;
 
-    h3{
+    h3 {
       margin: 0;
       background-color: #0000008c;
     }
   }
 
-  .satelite{
+  .satelite {
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: center;
-}
 
-    img{
+    h2 {
+      text-align: center;
+    }
+
+    .imagem {
       width: 80%;
       height: 50vh;
       object-fit: contain;
     }
 
-    .voltar{
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-
-      .active{
-        margin: 0;
-        padding 0;
-      }
-      img{
-        height: 10rem;
-      }
-    }
-
-    .desc{
+    .desc {
       margin-top: 3rem;
-      font-size: 3rem;
+      font-size: 3.7vh;
       background-color: #0000008c;
       padding: 1rem;
     }
   }
-
-  button{
-    font-size: 5rem;
-    padding: .2rem 2rem;
-    margin-bottom: 3rem;
-    margin-left: 3rem;
-    border: none;
-    color: #fdebdc;
-    border-radius: 1rem;
-    display: flex;
-
-    background: linear-gradient(223deg, #5b26ff, #000000, #8d00ff);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 18s ease infinite;
-    -moz-animation: AnimationName 18s ease infinite;
-    -o-animation: AnimationName 18s ease infinite;
-    animation: AnimationName 18s ease infinite;
-  }
-
-  @-webkit-keyframes AnimationName {
-    0% {
-      background-position: 0% 75%;
-    }
-    50% {
-      background-position: 100% 26%;
-    }
-    100% {
-      background-position: 0% 75%;
-    }
-  }
-  @-moz-keyframes AnimationName {
-    0% {
-      background-position: 0% 75%;
-    }
-    50% {
-      background-position: 100% 26%;
-    }
-    100% {
-      background-position: 0% 75%;
-    }
-  }
-  @-o-keyframes AnimationName {
-    0% {
-      background-position: 0% 75%;
-    }
-    50% {
-      background-position: 100% 26%;
-    }
-    100% {
-      background-position: 0% 75%;
-    }
-  }
-  @keyframes AnimationName {
-    0% {
-      background-position: 0% 75%;
-    }
-    50% {
-      background-position: 100% 26%;
-    }
-    100% {
-      background-position: 0% 75%;
-    }
 `;
 
 export default NasaPhoto;

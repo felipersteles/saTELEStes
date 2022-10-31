@@ -34,8 +34,8 @@ const Box = styled.div`
   display: flex;
   cursor: pointer;
   position: fixed;
-  left: 2rem;
-  top: 3.5rem;
+  left: 1rem;
+  top: 1rem;
   z-index: 10;
   & > *:nth-child(1) {
     animation-delay: 0.2s;
@@ -52,10 +52,7 @@ const Box = styled.div`
   & > *:nth-child(5) {
     animation-delay: 0.8s;
   }
-  @media only screen and (max-width: 600px) {
-    left: 1rem;
-    top: 7.5rem;
-  }
+
   @media only screen and (min-width: 720px) {
     left: 1rem;
     top: 1rem;
@@ -79,8 +76,8 @@ const Line = styled.span`
   border: 1px solid black;
   animation: ${play} 1s ease infinite;
   animation-play-state: ${(props) => (props.click ? "running" : "paused")};
-  height: 2rem;
-  width: 5px;
+  height: .3rem;
+  width: 4px;
   margin: 0 0.1rem;
 `;
 

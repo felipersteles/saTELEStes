@@ -53,9 +53,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50%;
     justify-content: space-evenly;
-    font-size: 3.5rem;
+    font-size: 3.5vh;
+    margin-top: 4vh;
 
     .frase {
       padding: 0 1.5rem;
@@ -66,11 +66,12 @@ const Container = styled.div`
 
       i {
         text-align: end;
-        font-size: 3rem;
+        font-size: 1rem;
       }
     }
 
     .botoes {
+      margin-top: 1rem;
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
@@ -87,15 +88,15 @@ const Container = styled.div`
     border-radius: 1rem;
     color: #effdea;
     border: none;
-    padding: 1rem 7rem;
+    padding: 1vh 11vh;
     left: 40vw;
     font-size: 6rem;
     display: flex;
 
     img {
       position: relative;
-      height: 6rem;
-      width: 6rem;
+      height: 8vh;
+      width: 8vh;
     }
 
     background: linear-gradient(223deg, #5b26ff, #000000, #8d00ff);

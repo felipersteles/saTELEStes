@@ -82,21 +82,6 @@ const Container = styled.div`
     text-align: center;
     font-size: 2.5vh;
   }
-
-  .voltar{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
-    .active{
-      margin: 0;
-      padding 0;
-    }
-    img{
-      height: 10rem;
-    }
-  }
 `;
 
 export default Einstein;

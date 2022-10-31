@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.voltar{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center; 
+}
+
+.voltar .active{
+  margin: 0;
+  padding: 0;
+}
+.voltar img{
+  height: 3.7rem;
+}
