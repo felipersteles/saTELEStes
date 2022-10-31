@@ -56,6 +56,10 @@ const Box = styled.div`
     left: 1rem;
     top: 7.5rem;
   }
+  @media only screen and (min-width: 720px) {
+    left: 1rem;
+    top: 1rem;
+  }
 `;
 
 const play = keyframes`

@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import fishing from "../assets/img/spike-fishing.png";
 import satelite from "../assets/img/satelite.png";
+import einstein from "../assets/img/einstein.png";
 import styled from "styled-components";
 import Loading from "./Loading";
 
@@ -18,14 +19,22 @@ const Home = () => {
             <i>Antoine de Saint-Exupéry</i>
           </div>
 
-          <Link to="/fotonasa">
-            <button>
-              <img src={satelite} alt="" />
-            </button>
-          </Link>
+          <div className="botoes">
+            <Link to="/fotonasa">
+              <button>
+                <img src={satelite} alt="" />
+              </button>
+            </Link>
+
+            <Link to="/AlbertEinstein">
+              <button>
+                <img src={einstein} alt="" />
+              </button>
+            </Link>
+          </div>
         </div>
 
-        <img src={fishing} alt="" />
+        <img src={fishing} alt="" className="mobile" />
       </Container>
     </Suspense>
   );
@@ -59,6 +68,12 @@ const Container = styled.div`
         text-align: end;
         font-size: 3rem;
       }
+    }
+
+    .botoes {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
     }
   }
 
@@ -134,6 +149,28 @@ const Container = styled.div`
     }
     100% {
       background-position: 0% 75%;
+    }
+  }
+
+  @media screen and (min-width: 720px) {
+    display: flex;
+    align-items: center;
+
+    .conteudo {
+      flex-direction: row;
+      padding: 5vh;
+      margin: 0 11vh;
+      gap: 15vh;
+
+      .frase {
+        flex: 1;
+        background-color: #00000080;
+        border-radius: 2rem;
+      }
+    }
+
+    .mobile {
+      display: none;
     }
   }
 `;

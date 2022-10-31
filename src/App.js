@@ -6,6 +6,7 @@ import Loading from "./components/Loading";
 
 const Home = lazy(() => import("./components/Home"));
 const NasaPhoto = lazy(() => import("./components/NasaPhoto"));
+const Einstein = lazy(() => import('./components/Einstein'));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/fotonasa" element={<NasaPhoto />} />
+          <Route path="/AlbertEinstein" element={<Einstein />} />
         </Routes>
       </Suspense>
     </>
