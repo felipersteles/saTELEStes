@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import fishing from "../assets/img/spike-fishing.png";
 import satelite from "../assets/img/satelite.png";
 import einstein from "../assets/img/einstein.png";
+import logo from "../assets/img/logo.png";
 import styled from "styled-components";
 import Loading from "./Loading";
 
@@ -31,6 +32,12 @@ const Home = () => {
                 <img src={einstein} alt="" />
               </button>
             </Link>
+
+            <a href="https://felipersteles.herokuapp.com/" target="_blank">
+              <button>
+                <img src={logo} alt="" />
+              </button>
+            </a>
           </div>
         </div>
 
@@ -47,6 +54,10 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+
+  button{
+    cursor: pointer;
+  }
 
   .conteudo {
     color: white;
