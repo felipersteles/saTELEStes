@@ -93,6 +93,7 @@ const Container = styled.div`
     position: fixed;
     bottom: 0;
     width: 100%;
+    
   }
 
   button {
@@ -103,6 +104,7 @@ const Container = styled.div`
     left: 40vw;
     font-size: 6rem;
     display: flex;
+    z-index: 10;
 
     img {
       position: relative;
