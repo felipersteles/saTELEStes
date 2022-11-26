@@ -93,7 +93,7 @@ const Container = styled.div`
     position: fixed;
     bottom: 0;
     width: 100%;
-    
+    z-index: 0;
   }
 
   button {
