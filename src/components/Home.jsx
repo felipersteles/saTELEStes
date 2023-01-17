@@ -1,16 +1,20 @@
 import React, { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Loading from "./Loading";
+
 import fishing from "../assets/img/spike-fishing.png";
 import satelite from "../assets/img/satelite.png";
 import einstein from "../assets/img/einstein.png";
 import logo from "../assets/img/logo.png";
-import styled from "styled-components";
-import Loading from "./Loading";
+import sol from "../assets/img/sol.svg";
 
 const Home = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Container>
+        <img src={fishing} alt="" className="mobile" />
+
         <div className="conteudo">
           <div className="frase">
             <span>
@@ -20,7 +24,7 @@ const Home = () => {
             <i>Antoine de Saint-Exupéry</i>
           </div>
 
-          <div className="botoes">
+          <div className="grid-template-columns">
             <Link to="/fotonasa">
               <button>
                 <img src={satelite} alt="" />
@@ -33,15 +37,27 @@ const Home = () => {
               </button>
             </Link>
 
-            <a href="https://felipersteles.herokuapp.com/" target="_blank">
+            <a
+              href="https://felipeteles.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button>
                 <img src={logo} alt="" />
               </button>
             </a>
+
+            <a
+              href="https://felipersteles.github.io/sistema-solar-experimento-um/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>
+                <img src={sol} alt="" />
+              </button>
+            </a>
           </div>
         </div>
-
-        <img src={fishing} alt="" className="mobile" />
       </Container>
     </Suspense>
   );
@@ -55,7 +71,7 @@ const Container = styled.div`
   background-attachment: fixed;
   background-position: center;
 
-  button{
+  button {
     cursor: pointer;
   }
 
@@ -81,11 +97,17 @@ const Container = styled.div`
       }
     }
 
-    .botoes {
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
+    .grid-template-columns {
+      display: grid;
+      grid-template-columns: 200px 200px;
+      gap: 0.2rem;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 
@@ -100,11 +122,11 @@ const Container = styled.div`
     border-radius: 1rem;
     color: #effdea;
     border: none;
-    padding: 1vh 11vh;
+    padding: 1vh 8vh;
     left: 40vw;
     font-size: 6rem;
     display: flex;
-    z-index: 10;
+    z-index: 10000;
 
     img {
       position: relative;
@@ -115,13 +137,13 @@ const Container = styled.div`
     background: linear-gradient(223deg, #5b26ff, #000000, #8d00ff);
     background-size: 600% 600%;
 
-    -webkit-animation: AnimationName 18s ease infinite;
-    -moz-animation: AnimationName 18s ease infinite;
-    -o-animation: AnimationName 18s ease infinite;
-    animation: AnimationName 18s ease infinite;
+    -webkit-animation: BotaoAnimation 18s ease infinite;
+    -moz-animation: BotaoAnimation 18s ease infinite;
+    -o-animation: BotaoAnimation 18s ease infinite;
+    animation: BotaoAnimation 18s ease infinite;
   }
 
-  @-webkit-keyframes AnimationName {
+  @-webkit-keyframes BotaoAnimation {
     0% {
       background-position: 0% 75%;
     }
@@ -132,7 +154,7 @@ const Container = styled.div`
       background-position: 0% 75%;
     }
   }
-  @-moz-keyframes AnimationName {
+  @-moz-keyframes BotaoAnimation {
     0% {
       background-position: 0% 75%;
     }
@@ -143,7 +165,7 @@ const Container = styled.div`
       background-position: 0% 75%;
     }
   }
-  @-o-keyframes AnimationName {
+  @-o-keyframes BotaoAnimation {
     0% {
       background-position: 0% 75%;
     }
@@ -154,7 +176,7 @@ const Container = styled.div`
       background-position: 0% 75%;
     }
   }
-  @keyframes AnimationName {
+  @keyframes BotaoAnimation {
     0% {
       background-position: 0% 75%;
     }
@@ -185,6 +207,12 @@ const Container = styled.div`
 
     .mobile {
       display: none;
+    }
+  }
+
+  @media screen and (min-width: 380px) {
+    button{
+      padding: 1vh 5vh;
     }
   }
 `;
